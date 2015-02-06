@@ -1,0 +1,10 @@
+<%= render "layouts/header"%>
+  <h2><%= @publish.title %></h2>
+  <br>
+  <h3><%= @publish.author%></h3>
+  <br>
+  <p><%= @publish.content%></p>
+  <br>
+  <%= link_to "edit", edit_publish_path(@publish)%> |
+  <%= link_to "delete", publish_path(@publish), method: :delete%> |
+  <%= link_to "back home", publishes_path%>

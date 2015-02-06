@@ -1,0 +1,7 @@
+<% if @book.status == false %>
+  <%= form_for @book, url: {action: 'update'} do |f|%>
+    <%= f.label :title%>
+    <%= f.label :author%>
+    <%= f.checkbox :value @book.status %>
+  <% end %>
+<% end %>

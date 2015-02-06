@@ -1,0 +1,16 @@
+<%= render "layouts/header"%>
+<%= form_for @publish, url: {action: 'update'} do |f|%>
+  <%= f.label :title%>
+  <%= f.text_field :title, value: @publish.title %>
+  <br>
+  <br>
+  <%= f.label :author%>
+  <%= f.text_field :author, value: @publish.author%>
+  <br>
+  <br>
+  <%= f.label :content%>
+  <%= f.text_area :content, value: @publish.content%>
+  <br>
+  <br>
+  <%=f.submit%>
+<% end %>

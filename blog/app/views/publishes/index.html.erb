@@ -1,0 +1,11 @@
+<%= render "layouts/header"%>
+<h1>BLOGOSPHERE</h1>
+<% @publishes.each do |publish| %>
+  <h2><%= link_to publish.title, publish_path(publish)%></h2>
+  <br>
+  <h3><%= publish.author%></h3>
+  <br>
+  <p><%= publish.content%></p>
+<% end %>
+<br>
+<%= link_to "Create a Post", new_publish_path%>

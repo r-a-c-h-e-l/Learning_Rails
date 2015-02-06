@@ -1,0 +1,13 @@
+<%= render "layouts/header"%>
+<%=form_for @publish, url:{action: 'create'} do |f|%>
+  <%= f.label :title%>
+  <%= f.text_field :title%>
+  <br>
+  <%= f.label :author%>
+  <%= f.text_field :author%>
+  <br>
+  <%= f.label :content%>
+  <%= f.text_area :content%>
+  <br>
+  <%=f.submit%>
+<% end %>
